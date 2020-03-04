@@ -5,8 +5,8 @@
 settings:
   registryBase: docker.io/conduction
   projectName: hpui
-  name: hpui
-  title: Huwelijks Planner
+  name: ds
+  title: Digispoof
   version: V.0.1
   description: '&#039;Dit is de huwelijksplanner app&#039;'
   repro: 'https://github.com/ConductionNL/huwelijksplanner-ui'

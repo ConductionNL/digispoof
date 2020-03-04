@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: V.0.1
 description: '&#039;Dit is de huwelijksplanner app&#039;'
-name: hpui
+name: ds
 version: 0.1.0
 home: pc.zaakonline.nl
 icon: pc.zaakonline.nl
