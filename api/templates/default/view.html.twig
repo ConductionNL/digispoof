@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Digispoof</title>
+	
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="img/favicon.png">	
+
+    <!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,900" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+    <link href="css/icons/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/slick/slick.css">
+
+    <!-- Theme CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- even wat snelle style sheet overwrites  -->
+    <style type="text/css">
+    
+	.intro-form select, textarea {
+    	width: 100%;
+	    margin-bottom: 25px;
+	    padding: 0 15px;
+	    height: 50px;
+	    border-radius: 0;
+	    font-size: 15px;
+	    color: #000;
+	    border: 2px solid #ddd;
+	    transition: .4s;
+	} 
+	
+	.intro-form select:focus, textarea:focus {
+    	outline: 0 !important;
+    	box-shadow: none !important;
+	}
+	
+    </style>
+</head>
+<body>
+
+<!-- CODE WRAP -->
+<div class="outer-wrapper" id="top">
+
+	<!-- NAVIGATION -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				
+				<!-- LOGO -->
+				<a class="navbar-brand" href="index.html"><i class="fas fa-user-shield"></i> Digispoof</a>
+			</div>
+		</div>
+	</nav>
+	<!-- NAVIGATION END -->
+
+	<!-- HERO -->	
+	<div class="intro2 overlay jarallax">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row center-flex">
+						<div class="col-md-7">
+							<img src="img/intro/2.png" class="img-responsive" alt=""/>
+						</div>
+
+						<div class="col-md-5">
+							<form class="intro-form" action="{{ responceUrl }}" method="post">
+							
+								<h4>Fake <b>inloggen</b></h4>
+								<select name="bsn">
+								  {% for persoon in people %}
+								  <option value="{{ persoon.burgerservicenummer  }}">{{ persoon.naam.voornamen }} {{ persoon.naam.geslachtsnaam }}</option>
+								  {% endfor %}
+								</select>
+								<input type="hidden" name="responce_url" value="{{ responceUrl }}">
+								<input type="hidden" name="token" value="{{ token }}">
+
+								<button type="submit" class="btn btn-primary btn-lg btn-block text-center">Inloggen</button>
+								<span>Opletten u kiest hiermee een "mock" personage uit het BRP component. Daar logt u mee in.</span>
+							</form>
+							<div id="response"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- HERO END -->
+	
+	
+	<!-- FOOTER -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+			
+				<!-- FOOTER LOGO -->
+				<div class="col-sm-4 widget">
+					<div class="f-logo"><i class="fas fa-user-shield"></i> Didispoof</div>
+					<p>Digispoof is een digitale oplossing van conduction voor het testen van Active Directory inlog systametiek zonder logius certificaten</p>
+					<div class="cinfo">
+						<p><i class="fa fa-map-marker"></i> Rubensstraat 50A,<br> 1077MT Amsterdam</p>
+						<p><i class="fa fa-envelope"></i> support@conduction.nl</p>
+					</div>
+				</div>
+				
+				<!-- USEFUL LINKS -->
+				<div class="col-sm-3 widget">
+					<h4>Useful Links</h4>
+					<ul class="footer-links">
+						<li><a href="http://www.conduction.nl"> Conduction</a></li>
+						<li><a href="http://www.zaakonline.nl"> Zaakonline</a></li>
+					</ul>
+				</div>
+				
+				
+			</div>
+		</div>
+	</footer>
+	<!-- FOOTER END -->	
+	
+	<!-- COPYRIGHT -->
+	<div class="copyright text-center">
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2019. <a href="http://www.coduction.nl">Conduction</a>. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- COPYRIGHT END -->
+</div>
+<!-- CODE WRAP END -->
+
+<a href="#top" class="back-to-top page-scroll"><i class="fa fa-angle-up"></i></a>	
+	
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jarallax/jarallax.js"></script>
+<script src="js/slick/slick.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/contact.js"></script>
+
+<!-- Mailchimp -->
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// jQuery Validation
+		$("#signup").validate({
+			// if valid, post data via AJAX
+			submitHandler: function(form) {
+				$.post("php/subscribe.php", { fname: $("#fname").val(), lname: $("#lname").val(), email: $("#email").val() }, function(data) {
+					$('#response').html(data);
+				});
+			},
+			// all fields are required
+			rules: {
+				fname: {
+					required: true
+				},
+				lname: {
+					required: true
+				},
+				email: {
+					required: true,
+					email: true
+				}
+			}
+		});
+	});
+</script>
+
+</body>
+</html>
