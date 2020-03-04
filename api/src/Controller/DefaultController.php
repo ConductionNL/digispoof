@@ -4,22 +4,12 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Session\Session;
-
-use App\Service\SjabloonService;
-use App\Service\BRPService;
-use App\Service\RequestTypeService;
-use App\Service\ContactService;
-use App\Service\AssentService;
-
 use App\Service\CommonGroundService;
-use App\Service\RequestService;
-use App\Service\ApplicationService;
 
 /**
  */
