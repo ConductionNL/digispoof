@@ -31,6 +31,9 @@ class DefaultController extends AbstractController
 		if($brpUrl == 'localhost'){
 			$brpUrl = "https://brp.dev.huwelijksplanner.online";
 		}
+		
+		$brpUrl = "https://brp.huwelijksplanner.online";
+		
 		$people = $commonGroundService->getResourceList($brpUrl.'/ingeschrevenpersonen');
 		
 		
