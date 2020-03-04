@@ -1,0 +1,104 @@
+a {
+	color: #43B02A;
+}
+
+.navbar-inverse .navbar-brand i {
+	color: #43B02A;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+	color: #43B02A;
+}
+
+.intro-form input:focus {
+	border:2px solid #43B02A;
+}
+
+.intro-slider .slick-dots li button {
+	border: 1px solid #43B02A;
+}
+
+.intro-slider .slick-dots li.slick-active button {
+	border: 1px solid #43B02A;
+	background: #43B02A;
+}
+
+.app-btns a {
+	background: #43B02A;
+}
+
+.service-item span {
+	color: #43B02A;
+}
+
+.btn-more a:hover {
+	border: 1px solid #43B02A;
+	color: #43B02A;
+}
+
+.service-item2 i {
+	background: #43B02A;
+}
+
+.bg-primary {
+	background: #43B02A;
+}
+
+.list li i {
+	background: #43B02A;
+}
+
+.staff-info {
+	background: #43B02A;
+}
+
+.team-slider .slick-dots li button {
+	border: 1px solid #43B02A;
+}
+
+.team-slider .slick-dots li.slick-active button {
+	border: 1px solid #43B02A;
+	background: #43B02A;
+}
+
+.plan-price {
+	color: #43B02A;
+}
+
+.btn-primary {
+	background: #43B02A;
+}
+
+.btn-default {
+	color: #43B02A;
+}
+
+.btn-dark:hover {
+	color: #43B02A;
+}
+
+.features-left i {
+	color: #43B02A;
+}
+
+.features-right i {
+	color: #43B02A;
+}
+
+.service-features i.fa {
+	background: #43B02A;
+}
+
+.cta {
+	background: #43B02A;
+}
+
+.f-logo i {
+	color: #43B02A;
+}
+
+.footer-links li a:hover {
+	color: #43B02A;
+}
+
+
