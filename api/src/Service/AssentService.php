@@ -39,12 +39,15 @@ class AssentService
             return $item->get();
         }
 
-        $response = $this->client->request('GET', '/assents/'.$id, [
-            'headers' => [
-                //'x-api-key' => '64YsjzZkrWWnK8bUflg8fFC1ojqv5lDn'
-            ],
-        ]
-            );
+        $response = $this->client->request(
+            'GET',
+            '/assents/'.$id,
+            [
+                'headers' => [
+                    //'x-api-key' => '64YsjzZkrWWnK8bUflg8fFC1ojqv5lDn'
+                ],
+            ]
+        );
 
         $response = json_decode($response->getBody(), true);
 
@@ -60,12 +63,15 @@ class AssentService
         // If a / has been supplied then we need to remove that first
         $uri = ltrim($uri, '/');
 
-        $response = $this->client->request('GET', $uri, [
-            'headers' => [
-                //'x-api-key' => '64YsjzZkrWWnK8bUflg8fFC1ojqv5lDn'
-            ],
-        ]
-            );
+        $response = $this->client->request(
+            'GET',
+            $uri,
+            [
+                'headers' => [
+                    //'x-api-key' => '64YsjzZkrWWnK8bUflg8fFC1ojqv5lDn'
+                ],
+            ]
+        );
 
         $response = json_decode($response->getBody(), true);
 
@@ -81,12 +87,15 @@ class AssentService
 
     public function createAssent($assent)
     {
-        $response = $this->client->request('POST', '/assents', [
-            'json'    => $assent,
-            'headers' => [
-                //'x-api-key' => '64YsjzZkrWWnK8bUflg8fFC1ojqv5lDn'
-            ],
-        ]
+        $response = $this->client->request(
+            'POST',
+            '/assents',
+            [
+                'json'    => $assent,
+                'headers' => [
+                    //'x-api-key' => '64YsjzZkrWWnK8bUflg8fFC1ojqv5lDn'
+                ],
+            ]
         );
 
         $response = json_decode($response->getBody(), true);
@@ -96,12 +105,15 @@ class AssentService
 
     public function updateAssent($assent)
     {
-        $response = $this->client->request('PUT', '/assents/'.$assent['id'], [
-            'json'    => $assent,
-            'headers' => [
-                //'x-api-key' => '64YsjzZkrWWnK8bUflg8fFC1ojqv5lDn'
-            ],
-        ]
+        $response = $this->client->request(
+            'PUT',
+            '/assents/'.$assent['id'],
+            [
+                'json'    => $assent,
+                'headers' => [
+                    //'x-api-key' => '64YsjzZkrWWnK8bUflg8fFC1ojqv5lDn'
+                ],
+            ]
         );
 
         $response = json_decode($response->getBody(), true);
