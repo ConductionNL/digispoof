@@ -33,7 +33,7 @@ class DefaultController extends AbstractController
 
         $brpUrl = 'https://brp.huwelijksplanner.online';
 
-        $people = $commonGroundService->getResourceList($brpUrl.'/ingeschrevenpersonen');
+        $people = $commonGroundService->getResourceList($brpUrl.'/ingeschrevenpersonen')['hydra:member'];
 
         return ['people'=>$people, 'responceUrl' => $responceUrl, 'token' => $token];
     }
