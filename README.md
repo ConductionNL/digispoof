@@ -2,6 +2,7 @@
 
 Description
 ----
+Digispoof is used for the digispoof interface that mocks the DigiD login. Digispoof provides a list of (fake/test) people from the BRPService and when a person is chosen from this list Digispoof can be used to return the BSN of the chosen person to a given returnUrl.
 
 Additional Information
 ----
