@@ -135,7 +135,7 @@ class CommonGroundService
             var_dump(json_encode($headers));
             var_dump(json_encode($url));
             var_dump($response->getBody());
-            die;
+            exit;
         }
 
         $response = json_decode($response->getBody(), true);
@@ -217,7 +217,7 @@ class CommonGroundService
             var_dump(json_encode($headers));
             var_dump(json_encode($url));
             var_dump($response->getBody());
-            die;
+            exit;
         }
 
         $response = json_decode($response->getBody(), true);
@@ -295,7 +295,7 @@ class CommonGroundService
             var_dump(json_encode($resource));
             var_dump(json_encode($url));
             var_dump(json_encode($response->getBody()));
-            die;
+            exit;
         }
 
         $response = json_decode($response->getBody(), true);
@@ -366,7 +366,7 @@ class CommonGroundService
             var_dump(json_encode($resource));
             var_dump(json_encode($url));
             var_dump($response->getBody());
-            die;
+            exit;
         }
 
         $response = json_decode($response->getBody(), true);
