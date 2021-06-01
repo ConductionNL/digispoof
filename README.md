@@ -1,8 +1,13 @@
 # Digisproof
+[![StyleCI](https://github.styleci.io/repos/244861540/shield?branch=master)](https://github.styleci.io/repos/244861540?branch=master)
+[![Docker Image CI](https://github.com/ConductionNL/digispoof/workflows/Docker%20Image%20CI/badge.svg?branch=master)](https://github.com/ConductionNL/digispoof/actions?query=workflow%3A"Docker+Image+CI")
+[![Artifacthub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/digispoof-interface)](https://artifacthub.io/packages/helm/digispoof-interface/digispoof-interface)
+[![BCH compliance](https://bettercodehub.com/edge/badge/ConductionNL/digispoof?branch=master)](https://bettercodehub.com/)
 
 Description
 ----
-Digispoof is used for the digispoof interface that mocks the DigiD login. Digispoof provides a list of (fake/test) people from the BRPService and when a person is chosen from this list Digispoof can be used to return the BSN of the chosen person to a given returnUrl.
+Digispoof is een SAML applicatie voor het testen van DigiD (en op termijn AIDAS) inlogmethodes. De gedachte hierbij is dat Digispoof technisch uitwisselbaar is met DigiD (dus exact hetzelfde werkt met betrekking tot API’s), maar doordat het gebruik maakt van het BRP (in mock-vorm) geen echte burgergegevens ontsluit.
+Het geeft echter wel een BSN nummer terug dat bestaat in het mock BRP. Dat betekent dat ontwikkelaars de mogelijkheid hebben om hun applicatie te testen met DigiD en BPR toegang zonder deze daadwerkelijk te hoeven aanvragen (waarvoor zelfs in demo-versies een PKI overheidscertificaat nodig is). Het is dan ook puur een development tool.
 
 Additional Information
 ----
